@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0150E9FD1C27AC5D0065F4DD /* NSTimerSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150E9FC1C27AC5D0065F4DD /* NSTimerSchedule.swift */; };
 		017DC2371C278F8D000AF8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC2361C278F8D000AF8C0 /* AppDelegate.swift */; };
-		017DC2391C278F8D000AF8C0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC2381C278F8D000AF8C0 /* FirstViewController.swift */; };
+		017DC2391C278F8D000AF8C0 /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC2381C278F8D000AF8C0 /* SlideShowViewController.swift */; };
 		017DC23B1C278F8D000AF8C0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC23A1C278F8D000AF8C0 /* SecondViewController.swift */; };
 		017DC23E1C278F8D000AF8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017DC23C1C278F8D000AF8C0 /* Main.storyboard */; };
 		017DC2401C278F8D000AF8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017DC23F1C278F8D000AF8C0 /* Assets.xcassets */; };
+		017DC2491C279103000AF8C0 /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC2481C279103000AF8C0 /* RedditClient.swift */; };
+		017DC24B1C279154000AF8C0 /* RedditConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC24A1C279154000AF8C0 /* RedditConstants.swift */; };
+		017DC24D1C2791C2000AF8C0 /* RedditConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC24C1C2791C2000AF8C0 /* RedditConvenience.swift */; };
+		017DC24F1C279200000AF8C0 /* APIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DC24E1C279200000AF8C0 /* APIHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0150E9FC1C27AC5D0065F4DD /* NSTimerSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerSchedule.swift; sourceTree = "<group>"; };
 		017DC2331C278F8D000AF8C0 /* Reddit Slides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit Slides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017DC2361C278F8D000AF8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		017DC2381C278F8D000AF8C0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		017DC2381C278F8D000AF8C0 /* SlideShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
 		017DC23A1C278F8D000AF8C0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		017DC23D1C278F8D000AF8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		017DC23F1C278F8D000AF8C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		017DC2411C278F8D000AF8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		017DC2481C279103000AF8C0 /* RedditClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
+		017DC24A1C279154000AF8C0 /* RedditConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditConstants.swift; sourceTree = "<group>"; };
+		017DC24C1C2791C2000AF8C0 /* RedditConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditConvenience.swift; sourceTree = "<group>"; };
+		017DC24E1C279200000AF8C0 /* APIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0150E9FE1C27AC680065F4DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				017DC24E1C279200000AF8C0 /* APIHelpers.swift */,
+				0150E9FC1C27AC5D0065F4DD /* NSTimerSchedule.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		017DC22A1C278F8D000AF8C0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +73,26 @@
 		017DC2351C278F8D000AF8C0 /* Reddit Slides */ = {
 			isa = PBXGroup;
 			children = (
+				0150E9FE1C27AC680065F4DD /* Helpers */,
+				017DC2471C2790F5000AF8C0 /* Reddit Service */,
 				017DC2361C278F8D000AF8C0 /* AppDelegate.swift */,
-				017DC2381C278F8D000AF8C0 /* FirstViewController.swift */,
+				017DC2381C278F8D000AF8C0 /* SlideShowViewController.swift */,
 				017DC23A1C278F8D000AF8C0 /* SecondViewController.swift */,
 				017DC23C1C278F8D000AF8C0 /* Main.storyboard */,
 				017DC23F1C278F8D000AF8C0 /* Assets.xcassets */,
 				017DC2411C278F8D000AF8C0 /* Info.plist */,
 			);
 			path = "Reddit Slides";
+			sourceTree = "<group>";
+		};
+		017DC2471C2790F5000AF8C0 /* Reddit Service */ = {
+			isa = PBXGroup;
+			children = (
+				017DC2481C279103000AF8C0 /* RedditClient.swift */,
+				017DC24A1C279154000AF8C0 /* RedditConstants.swift */,
+				017DC24C1C2791C2000AF8C0 /* RedditConvenience.swift */,
+			);
+			name = "Reddit Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017DC24F1C279200000AF8C0 /* APIHelpers.swift in Sources */,
+				017DC2491C279103000AF8C0 /* RedditClient.swift in Sources */,
 				017DC23B1C278F8D000AF8C0 /* SecondViewController.swift in Sources */,
 				017DC2371C278F8D000AF8C0 /* AppDelegate.swift in Sources */,
-				017DC2391C278F8D000AF8C0 /* FirstViewController.swift in Sources */,
+				017DC2391C278F8D000AF8C0 /* SlideShowViewController.swift in Sources */,
+				017DC24B1C279154000AF8C0 /* RedditConstants.swift in Sources */,
+				017DC24D1C2791C2000AF8C0 /* RedditConvenience.swift in Sources */,
+				0150E9FD1C27AC5D0065F4DD /* NSTimerSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +315,7 @@
 				017DC2461C278F8D000AF8C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
